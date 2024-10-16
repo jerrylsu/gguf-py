@@ -1,4 +1,9 @@
+# Release
+
+[GOT-OCR2_0-716M-BF16-GUFF](https://huggingface.co/Jerry666/GOT-OCR2_0-716M-BF16-GUFF)
+
 # Description
+
 This is a Python package for writing binary files in the GGUF based on llama_cpp.
 
 # Usage
