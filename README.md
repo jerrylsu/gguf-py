@@ -1,6 +1,6 @@
 # Release
 
-[GOT-OCR2_0-716M-BF16-GUFF](https://huggingface.co/Jerry666/GOT-OCR2_0-716M-BF16-GUFF)
+- 2024.10.16: [GOT-OCR2_0-716M-BF16-GUFF](https://huggingface.co/Jerry666/GOT-OCR2_0-716M-BF16-GUFF)
 
 # Description
 
