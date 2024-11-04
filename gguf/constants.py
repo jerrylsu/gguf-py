@@ -140,6 +140,14 @@ class Keys:
 
     class WKV:
         HEAD_SIZE = "{arch}.wkv.head_size"
+    
+    class GOT:
+        VIS_BLOCK_COUNT      = "{arch}.vis_n_layer"
+        VIS_EMBEDDING_LENGTH = "{arch}.vis_n_embd"
+        VIS_HEAD_COUNT       = "{arch}.vis_n_head"
+        VIS_IMG_SIZE         = "{arch}.vis_img_size"
+        VIS_PATCH_SIZE       = "{arch}.vis_patch_size"
+        VIS_WINDOW_SIZE      = "{arch}.vis_window_size"
 
     class Tokenizer:
         MODEL                = "tokenizer.ggml.model"
@@ -352,8 +360,12 @@ class MODEL_TENSOR(IntEnum):
     VIS_MLP_LIN2         = auto()
     VIS_NORM1            = auto()
     VIS_NORM2            = auto()
-    VIS_NECK             = auto()
-    VIS_NET              = auto()
+    VIS_NECK_0           = auto()
+    VIS_NECK_1           = auto()
+    VIS_NECK_2           = auto()
+    VIS_NECK_3           = auto()
+    VIS_NET_2            = auto()
+    VIS_NET_3            = auto()
     VIS_PATCH_EMBD_PROJ  = auto()
     VIS_POS_EMBD         = auto()
     MM_PROJ              = auto()
@@ -524,8 +536,12 @@ TENSOR_NAMES: dict[MODEL_TENSOR, str] = {
     MODEL_TENSOR.VIS_MLP_LIN2:              "vis.blk.{bid}.mlp.lin2",
     MODEL_TENSOR.VIS_NORM1:                 "vis.blk.{bid}.norm1",
     MODEL_TENSOR.VIS_NORM2:                 "vis.blk.{bid}.norm2",
-    MODEL_TENSOR.VIS_NECK:                  "vis.neck.{bid}",
-    MODEL_TENSOR.VIS_NET:                   "vis.net_{bid}",
+    MODEL_TENSOR.VIS_NECK_0:                "vis.neck.0",
+    MODEL_TENSOR.VIS_NECK_1:                "vis.neck.1",
+    MODEL_TENSOR.VIS_NECK_2:                "vis.neck.2",
+    MODEL_TENSOR.VIS_NECK_3:                "vis.neck.3",
+    MODEL_TENSOR.VIS_NET_2:                 "vis.net_2",
+    MODEL_TENSOR.VIS_NET_3:                 "vis.net_3",
     MODEL_TENSOR.VIS_PATCH_EMBD_PROJ:       "vis_patch_embd.proj",
     MODEL_TENSOR.VIS_POS_EMBD:              "vis_pos_embd",
     MODEL_TENSOR.MM_PROJ:                   "mm_proj",
@@ -1309,8 +1325,12 @@ MODEL_TENSORS: dict[MODEL_ARCH, list[MODEL_TENSOR]] = {
         MODEL_TENSOR.VIS_MLP_LIN2,
         MODEL_TENSOR.VIS_NORM1,
         MODEL_TENSOR.VIS_NORM2,
-        MODEL_TENSOR.VIS_NECK,
-        MODEL_TENSOR.VIS_NET,
+        MODEL_TENSOR.VIS_NECK_0,
+        MODEL_TENSOR.VIS_NECK_1,
+        MODEL_TENSOR.VIS_NECK_2,
+        MODEL_TENSOR.VIS_NECK_3,
+        MODEL_TENSOR.VIS_NET_2,
+        MODEL_TENSOR.VIS_NET_3,
         MODEL_TENSOR.VIS_PATCH_EMBD_PROJ,
         MODEL_TENSOR.VIS_POS_EMBD,
         MODEL_TENSOR.MM_PROJ,

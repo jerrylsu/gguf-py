@@ -754,6 +754,24 @@ class GGUFWriter:
     def add_ssm_dt_b_c_rms(self, value: bool) -> None:
         self.add_bool(Keys.SSM.DT_B_C_RMS.format(arch=self.arch), value)
 
+    def add_vis_block_count(self, value: int) -> None:
+        self.add_uint32(Keys.GOT.VIS_BLOCK_COUNT.format(arch=self.arch), value)
+
+    def add_vis_embedding_length(self, value: int) -> None:
+        self.add_uint32(Keys.GOT.VIS_EMBEDDING_LENGTH.format(arch=self.arch), value)
+
+    def add_vis_head_count(self, value: int) -> None:
+        self.add_uint32(Keys.GOT.VIS_HEAD_COUNT.format(arch=self.arch), value)
+
+    def add_vis_img_size(self, value: int) -> None:
+        self.add_uint32(Keys.GOT.VIS_IMG_SIZE.format(arch=self.arch), value)
+
+    def add_vis_patch_size(self, value: int) -> None:
+        self.add_uint32(Keys.GOT.VIS_PATCH_SIZE.format(arch=self.arch), value)
+    
+    def add_vis_window_size(self, value: int) -> None:
+        self.add_uint32(Keys.GOT.VIS_WINDOW_SIZE.format(arch=self.arch), value)
+
     def add_tokenizer_model(self, model: str) -> None:
         self.add_string(Keys.Tokenizer.MODEL, model)
 

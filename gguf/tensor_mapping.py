@@ -15,8 +15,33 @@ class TensorNameMap:
         MODEL_TENSOR.VIS_PATCH_EMBD_PROJ: (
             "model.vision_tower_high.patch_embed.proj",   # got
         ),
+
         MODEL_TENSOR.VIS_POS_EMBD: (
             "model.vision_tower_high.pos_embed",    # got
+        ),
+
+        MODEL_TENSOR.VIS_NECK_0: (
+            "model.vision_tower_high.neck.0",  # got
+        ),
+
+        MODEL_TENSOR.VIS_NECK_1: (
+            "model.vision_tower_high.neck.1",  # got
+        ),
+
+        MODEL_TENSOR.VIS_NECK_2: (
+            "model.vision_tower_high.neck.2",  # got
+        ),
+
+        MODEL_TENSOR.VIS_NECK_3: (
+            "model.vision_tower_high.neck.3",  # got
+        ),
+
+        MODEL_TENSOR.VIS_NET_2: (                 
+            "model.vision_tower_high.net_2",  # got
+        ),
+        
+        MODEL_TENSOR.VIS_NET_3: (                 
+            "model.vision_tower_high.net_3",  # got
         ),
 
         # Token embeddings
@@ -722,14 +747,6 @@ class TensorNameMap:
 
         MODEL_TENSOR.VIS_NORM2: (
             "model.vision_tower_high.blocks.{bid}.norm2",  # got
-        ),
-
-        MODEL_TENSOR.VIS_NECK: (
-            "model.vision_tower_high.neck.{bid}",  # got
-        ),
-
-        MODEL_TENSOR.VIS_NET: (                 
-            "model.vision_tower_high.net_{bid}",  # got
         ),  
     }
 

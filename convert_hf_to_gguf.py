@@ -4142,6 +4142,27 @@ class GraniteMoeModel(GraniteModel):
 class GOTOCR2Model(Model):
     model_arch = gguf.MODEL_ARCH.GOT_OCR2
 
+    def set_gguf_parameters(self):
+        super().set_gguf_parameters()
+        if vis_n_layer := self.hparams.get("vis_n_layer"):
+            self.gguf_writer.add_vis_block_count(vis_n_layer)
+            logger.info("gguf: (got) vis_n_layer = %s", vis_n_layer)
+        if vis_n_embd := self.hparams.get("vis_n_embd"):
+            self.gguf_writer.add_vis_embedding_length(vis_n_embd)
+            logger.info("gguf: (got) vis_n_embd = %s", vis_n_embd)
+        if vis_n_head := self.hparams.get("vis_n_head"):
+            self.gguf_writer.add_vis_head_count(vis_n_head)
+            logger.info("gguf: (got) vis_n_head = %s", vis_n_head)
+        if vis_img_size := self.hparams.get("vis_img_size"):
+            self.gguf_writer.add_vis_img_size(vis_img_size)
+            logger.info("gguf: (got) vis_img_size = %s", vis_img_size)
+        if vis_patch_size := self.hparams.get("vis_patch_size"):
+            self.gguf_writer.add_vis_patch_size(vis_patch_size)
+            logger.info("gguf: (got) vis_patch_size = %s", vis_patch_size)
+        if vis_window_size := self.hparams.get("vis_window_size"):
+            self.gguf_writer.add_vis_window_size(vis_window_size)
+            logger.info("gguf: (got) vis_window_size = %s", vis_window_size)
+
     def set_vocab(self):
         try:
             self._set_vocab_sentencepiece()
@@ -4227,6 +4248,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--outfile", type=Path,
+        default="/Users/sulei03/Documents/llama.cpp/data/output",
         help="path to write to; default: based on input. {ftype} will be replaced by the outtype.",
     )
     parser.add_argument(
@@ -4239,6 +4261,7 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument(
         "--model", type=Path,
+        default="/Users/sulei03/Documents/llama.cpp/data/got-ocr2_0",
         help="directory containing model file",
     )
     parser.add_argument(
