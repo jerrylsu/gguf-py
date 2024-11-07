@@ -4153,6 +4153,9 @@ class GOTOCR2Model(Model):
         if vis_n_head := self.hparams.get("vis_n_head"):
             self.gguf_writer.add_vis_head_count(vis_n_head)
             logger.info("gguf: (got) vis_n_head = %s", vis_n_head)
+        if vis_intermediate_size := self.hparams.get("vis_intermediate_size"):
+            self.gguf_writer.add_vis_intermediate_size(vis_intermediate_size)
+            logger.info("gguf: (got) vis_intermediate_size = %s", vis_intermediate_size)
         if vis_img_size := self.hparams.get("vis_img_size"):
             self.gguf_writer.add_vis_img_size(vis_img_size)
             logger.info("gguf: (got) vis_img_size = %s", vis_img_size)
