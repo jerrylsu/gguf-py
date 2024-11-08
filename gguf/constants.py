@@ -146,6 +146,8 @@ class Keys:
         VIS_EMBEDDING_LENGTH  = "{arch}.vis_n_embd"
         VIS_HEAD_COUNT        = "{arch}.vis_n_head"
         VIS_INTERMEDIATE_SIZE = "{arch}.vis_intermediate_size"
+        VIS_IN_CHANNELS      = "{arch}.vis_in_channels"
+        VIS_OUT_CHANNELS      = "{arch}.vis_out_channels"
         VIS_IMG_SIZE          = "{arch}.vis_img_size"
         VIS_PATCH_SIZE        = "{arch}.vis_patch_size"
         VIS_WINDOW_SIZE       = "{arch}.vis_window_size"

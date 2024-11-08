@@ -38,6 +38,8 @@
   "vis_n_embd": 768,
   "vis_n_head": 12,
   "vis_intermediate_size": 3072,
+  "vis_in_channels": 3,
+  "vis_out_channels": 256,
   "vis_img_size": 1024,
   "vis_patch_size": 16,
   "vis_window_size": 14,

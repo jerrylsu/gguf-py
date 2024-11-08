@@ -490,6 +490,8 @@ INFO:hf-to-gguf:gguf: (got) vis_n_layer = 12
 INFO:hf-to-gguf:gguf: (got) vis_n_embd = 768
 INFO:hf-to-gguf:gguf: (got) vis_n_head = 12
 INFO:hf-to-gguf:gguf: (got) vis_intermediate_size = 3072
+INFO:hf-to-gguf:gguf: (got) vis_in_channels = 3
+INFO:hf-to-gguf:gguf: (got) vis_out_channels = 256
 INFO:hf-to-gguf:gguf: (got) vis_img_size = 1024
 INFO:hf-to-gguf:gguf: (got) vis_patch_size = 16
 INFO:hf-to-gguf:gguf: (got) vis_window_size = 14
@@ -501,5 +503,5 @@ INFO:gguf.vocab:Setting special token type unk to 151643
 INFO:hf-to-gguf:Set model quantization version
 INFO:gguf.gguf_writer:Writing the following files:
 INFO:gguf.gguf_writer:/Users/sulei03/Documents/llama.cpp/data/output/GOT-OCR2_0-716M-BF16.gguf: n_tensors = 472, total_size = 1.4G
-Writing: 100%|███████████████████████████████████████████████████████████████████████████████████| 1.44G/1.44G [00:07<00:00, 193Mbyte/s]
+Writing: 100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1.44G/1.44G [00:07<00:00, 198Mbyte/s]
 INFO:hf-to-gguf:Model successfully exported to /Users/sulei03/Documents/llama.cpp/data/output/GOT-OCR2_0-716M-BF16.gguf

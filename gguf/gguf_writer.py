@@ -765,6 +765,12 @@ class GGUFWriter:
 
     def add_vis_intermediate_size(self, value: int) -> None:
         self.add_uint32(Keys.GOT.VIS_INTERMEDIATE_SIZE.format(arch=self.arch), value)
+    
+    def add_vis_in_channels(self, value: int) -> None:
+        self.add_uint32(Keys.GOT.VIS_IN_CHANNELS.format(arch=self.arch), value)
+    
+    def add_vis_out_channels(self, value: int) -> None:
+        self.add_uint32(Keys.GOT.VIS_OUT_CHANNELS.format(arch=self.arch), value)
 
     def add_vis_img_size(self, value: int) -> None:
         self.add_uint32(Keys.GOT.VIS_IMG_SIZE.format(arch=self.arch), value)
