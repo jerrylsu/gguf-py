@@ -36,7 +36,7 @@ class SpecialVocab:
         if special_token_types is not None:
             self.special_token_types = special_token_types
         else:
-            self.special_token_types = ('bos', 'eos', 'unk', 'sep', 'pad', 'cls', 'mask')
+            self.special_token_types = ('bos', 'eos', 'im_start', 'im_end', 'im_patch', 'unk', 'sep', 'pad', 'cls', 'mask')
         self._load(Path(path))
 
     def __repr__(self) -> str:

@@ -146,11 +146,12 @@ class Keys:
         VIS_EMBEDDING_LENGTH  = "{arch}.vis_n_embd"
         VIS_HEAD_COUNT        = "{arch}.vis_n_head"
         VIS_INTERMEDIATE_SIZE = "{arch}.vis_intermediate_size"
-        VIS_IN_CHANNELS      = "{arch}.vis_in_channels"
+        VIS_IN_CHANNELS       = "{arch}.vis_in_channels"
         VIS_OUT_CHANNELS      = "{arch}.vis_out_channels"
         VIS_IMG_SIZE          = "{arch}.vis_img_size"
         VIS_PATCH_SIZE        = "{arch}.vis_patch_size"
         VIS_WINDOW_SIZE       = "{arch}.vis_window_size"
+        VIS_IMG_TOKEN_LEN     = "{arch}.vis_img_token_len"
 
     class Tokenizer:
         MODEL                = "tokenizer.ggml.model"
@@ -161,7 +162,10 @@ class Keys:
         SCORES               = "tokenizer.ggml.scores"
         MERGES               = "tokenizer.ggml.merges"
         BOS_ID               = "tokenizer.ggml.bos_token_id"
-        EOS_ID               = "tokenizer.ggml.eos_token_id"
+        IMG_BOS_ID           = "tokenizer.ggml.img_bos_token_id"    # for GOT
+        IMG_PATCH_ID         = "tokenizer.ggml.img_patch_token_id"  # GOT
+        EOS_ID               = "tokenizer.ggml.eos_token_id"        
+        IMG_EOS_ID           = "tokenizer.ggml.img_eos_token_id"    # GOT
         UNK_ID               = "tokenizer.ggml.unknown_token_id"
         SEP_ID               = "tokenizer.ggml.seperator_token_id"
         PAD_ID               = "tokenizer.ggml.padding_token_id"

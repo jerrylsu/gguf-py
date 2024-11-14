@@ -4156,6 +4156,9 @@ class GOTOCR2Model(Model):
         if vis_intermediate_size := self.hparams.get("vis_intermediate_size"):
             self.gguf_writer.add_vis_intermediate_size(vis_intermediate_size)
             logger.info("gguf: (got) vis_intermediate_size = %s", vis_intermediate_size)
+        if vis_img_token_len := self.hparams.get("image_token_len"):
+            self.gguf_writer.add_vis_img_token_len(vis_img_token_len)
+            logger.info("gguf: (got) vis_img_token_len = %s", vis_img_token_len)
         if vis_in_channels := self.hparams.get("vis_in_channels"):
             self.gguf_writer.add_vis_in_channels(vis_in_channels)
             logger.info("gguf: (got) vis_in_channels = %s", vis_in_channels)

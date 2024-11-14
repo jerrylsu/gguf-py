@@ -766,6 +766,9 @@ class GGUFWriter:
     def add_vis_intermediate_size(self, value: int) -> None:
         self.add_uint32(Keys.GOT.VIS_INTERMEDIATE_SIZE.format(arch=self.arch), value)
     
+    def add_vis_img_token_len(self, value: int) -> None:
+        self.add_uint32(Keys.GOT.VIS_IMG_TOKEN_LEN.format(arch=self.arch), value)
+
     def add_vis_in_channels(self, value: int) -> None:
         self.add_uint32(Keys.GOT.VIS_IN_CHANNELS.format(arch=self.arch), value)
     
@@ -807,6 +810,15 @@ class GGUFWriter:
 
     def add_eos_token_id(self, id: int) -> None:
         self.add_uint32(Keys.Tokenizer.EOS_ID, id)
+    
+    def add_im_start_token_id(self, id: int) -> None:
+        self.add_uint32(Keys.Tokenizer.IMG_BOS_ID, id)
+    
+    def add_im_end_token_id(self, id: int) -> None:
+        self.add_uint32(Keys.Tokenizer.IMG_EOS_ID, id)
+    
+    def add_im_patch_token_id(self, id: int) -> None:
+        self.add_uint32(Keys.Tokenizer.IMG_PATCH_ID, id)
 
     def add_unk_token_id(self, id: int) -> None:
         self.add_uint32(Keys.Tokenizer.UNK_ID, id)
